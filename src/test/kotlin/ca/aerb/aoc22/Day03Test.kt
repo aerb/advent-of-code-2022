@@ -11,7 +11,7 @@ class Day03Test {
 
     @Test
     fun part1() {
-        File("3.p1.txt").readLines().map { line ->
+        File("3.txt").readLines().map { line ->
             require(line.length % 2 == 0)
             val a = line.substring(0, line.length / 2)
             val b = line.substring(line.length / 2)
@@ -22,7 +22,7 @@ class Day03Test {
 
     @Test
     fun part2() {
-        File("3.p1.txt").readLines().asSequence()
+        File("3.txt").readLines().asSequence()
             .map { it.toSet() }.chunked(3).map {
                 it[0].intersect(it[1]).intersect(it[2])
             }.map {

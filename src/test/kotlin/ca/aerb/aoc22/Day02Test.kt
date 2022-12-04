@@ -14,7 +14,7 @@ class Day02Test {
     fun part1() {
 
         val rules =
-            File("2.p1.txt").readLines().map {
+            File("2.txt").readLines().map {
                 it.split(" ").let { (a, b) ->
                     a.toType() to b.toType()
                 }
@@ -48,7 +48,7 @@ class Day02Test {
     @Test
     fun part2() {
         val rules =
-            File("2.p1.txt").readLines().map {
+            File("2.txt").readLines().map {
                 it.split(" ").let { (a, b) ->
                     a.toType() to b.toOutcome()
                 }
