@@ -1,6 +1,5 @@
 package ca.aerb.aoc22
 
-import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -16,7 +15,7 @@ fun <T> T.alsoPrintln(): T {
     return this
 }
 
-fun <T, C : Iterable<T>> C.onEachPrint(): C = onEach { println(it) }
+fun <T, C : Iterable<T>> C.onEachPrintln(): C = onEach { println(it) }
 
 fun IntRange.partiallyContains(other: IntRange): Boolean =
     other.first in first..last || other.last in first..last
