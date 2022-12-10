@@ -10,8 +10,8 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
     .toString(16)
     .padStart(32, '0')
 
-fun <T> T.alsoPrintln(): T {
-    println(this)
+fun <T> T.alsoPrintln(block: (T) -> Any? = { it }): T {
+    println(block(this))
     return this
 }
 
