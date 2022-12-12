@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package ca.aerb.aoc22
 
 import java.math.BigInteger
@@ -14,6 +16,11 @@ fun <T> T.alsoPrintln(block: (T) -> Any? = { it }): T {
     println(block(this))
     return this
 }
+
+fun List<Int>.product(): Int = reduce { acc, n -> acc * n }
+
+fun List<Long>.product(): Long = reduce { acc, n -> acc * n }
+
 
 fun <T, C : Iterable<T>> C.onEachPrintln(f: (T) -> Any? = { it }): C =
     onEach { println(f(it)) }
