@@ -30,3 +30,8 @@ fun IntRange.partiallyContains(other: IntRange): Boolean =
 
 fun IntRange.fullyContains(other: IntRange): Boolean =
     other.first >= first && other.last <= last
+
+fun intRangeFrom(vararg values: Int): IntRange {
+    val sorted = values.sorted()
+    return IntRange(sorted.first(), sorted.last())
+}
