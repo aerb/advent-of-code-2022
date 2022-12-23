@@ -128,6 +128,8 @@ class Day14Test {
             }
         }
 
+        draw()
+        return
         var i = 0
         while (true) {
             if(dropFrom(entrance)) break
